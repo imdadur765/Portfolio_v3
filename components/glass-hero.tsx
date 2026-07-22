@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const DESKTOP_RADIUS = 260;
 const MOBILE_RADIUS = 165;
@@ -148,20 +149,31 @@ export default function GlassHero() {
       {/* LAYER 1: Base Portrait */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-no-repeat bg-[length:145%] bg-[position:72%_100%] sm:bg-[length:130%] sm:bg-[position:75%_100%] md:bg-cover md:bg-center animate-hero-base z-0"
-        style={{
-          backgroundImage: "url('/images/base_image_desktop.png')",
-        }}
-      />
+        className="absolute inset-0 animate-hero-base z-0"
+      >
+        <Image
+          src="/images/base_image_desktop.png"
+          fill
+          priority
+          quality={100}
+          alt=""
+          className="object-cover object-[65%_15%] md:object-center"
+        />
+      </div>
 
       {/* LAYER 2: Reveal Portrait (with Feathered Radial Mask) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-no-repeat bg-[length:145%] bg-[position:72%_100%] sm:bg-[length:130%] sm:bg-[position:75%_100%] md:bg-cover md:bg-center reveal-mask-layer z-10 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/reveal_image_desktop.png')",
-        }}
-      />
+        className="absolute inset-0 reveal-mask-layer z-10 pointer-events-none"
+      >
+        <Image
+          src="/images/reveal_image_desktop.png"
+          fill
+          quality={100}
+          alt=""
+          className="object-cover object-[65%_15%] md:object-center"
+        />
+      </div>
 
 
       {/* TOP FADE MASK: soft gradient from bg color to transparent */}
