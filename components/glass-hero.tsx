@@ -148,7 +148,7 @@ export default function GlassHero() {
       {/* LAYER 1: Base Portrait */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-center bg-no-repeat bg-cover animate-hero-base z-0"
+        className="absolute inset-0 bg-no-repeat animate-hero-base z-0 bg-[position:75%_center] md:bg-center bg-cover"
         style={{
           backgroundImage: "url('/images/base_image_desktop.png')",
         }}
@@ -157,7 +157,7 @@ export default function GlassHero() {
       {/* LAYER 2: Reveal Portrait (with Feathered Radial Mask) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-center bg-no-repeat bg-cover reveal-mask-layer z-10 pointer-events-none"
+        className="absolute inset-0 bg-no-repeat reveal-mask-layer z-10 pointer-events-none bg-[position:75%_center] md:bg-center bg-cover"
         style={{
           backgroundImage: "url('/images/reveal_image_desktop.png')",
         }}
@@ -190,8 +190,8 @@ export default function GlassHero() {
         className="absolute left-0 right-0 z-40 animate-fade-down flex items-center justify-between"
         style={{
           top: "max(2.5rem, env(safe-area-inset-top))",
-          paddingLeft: "max(5.6vw, 2rem)",
-          paddingRight: "max(5.6vw, 2rem)",
+          paddingLeft: "max(5.6vw, 1.5rem)",
+          paddingRight: "max(5.6vw, 1.5rem)",
         }}
       >
         {/* Brand */}
@@ -266,11 +266,11 @@ export default function GlassHero() {
         <div
           className="absolute"
           style={{
-            top: "34%",
-            left: "max(5.6vw, 2rem)",
+            top: "clamp(18%, 22vh, 34%)",
+            left: "max(5.6vw, 1.5rem)",
           }}
         >
-          <h1 className="font-sans font-medium text-[#0f172a] leading-[0.93] tracking-[-0.085em] text-[clamp(3.5rem,8vw,6.8rem)]">
+          <h1 className="font-sans font-medium text-[#0f172a] leading-[0.91] tracking-[-0.085em] text-[clamp(2.75rem,6.8vw,6.8rem)]">
             <span className="block animate-heading-1">Building</span>
             <span className="block animate-heading-2">Beyond</span>
             <span className="block animate-heading-3">Possible.</span>
@@ -279,10 +279,10 @@ export default function GlassHero() {
 
         {/* Bottom Left Copy & CTA */}
         <div
-          className="absolute max-w-sm md:max-w-md animate-intro pointer-events-auto"
+          className="absolute max-w-[280px] sm:max-w-sm md:max-w-md animate-intro pointer-events-auto"
           style={{
-            bottom: "max(2.5rem, env(safe-area-inset-bottom))",
-            left: "max(5.6vw, 2rem)",
+            bottom: "max(2rem, env(safe-area-inset-bottom))",
+            left: "max(5.6vw, 1.5rem)",
           }}
         >
           <p className="font-sans text-sm md:text-base text-slate-700 font-normal leading-relaxed mb-5">
