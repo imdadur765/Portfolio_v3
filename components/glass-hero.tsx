@@ -170,14 +170,14 @@ export default function GlassHero() {
         {/* LAYER 1: Base Portrait */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-center bg-no-repeat bg-cover animate-hero-base z-0"
+          className="absolute inset-0 bg-center bg-no-repeat bg-cover max-md:bg-[length:auto_90%] max-md:bg-[position:75%_center] animate-hero-base z-0"
           style={{ backgroundImage: "url('/images/base_image_desktop.png')" }}
         />
 
         {/* LAYER 2: Reveal Portrait */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-center bg-no-repeat bg-cover reveal-mask-layer z-10 pointer-events-none"
+          className="absolute inset-0 bg-center bg-no-repeat bg-cover max-md:bg-[length:auto_90%] max-md:bg-[position:75%_center] reveal-mask-layer z-10 pointer-events-none"
           style={{ backgroundImage: "url('/images/reveal_image_desktop.png')" }}
         />
 
