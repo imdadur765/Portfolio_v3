@@ -16,31 +16,9 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   width: 100%;
-  overflow-x: hidden;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE / Edge */
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none; /* Chrome / Safari */
-}
-
-/* Marquee strip */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-marquee {
-  animation: marquee 28s linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation: none !important;
-  }
+  overflow: hidden;
 }
 
 /* Keyframe entrance animations */
