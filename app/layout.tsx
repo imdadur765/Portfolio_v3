@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
+import { Albert_Sans, Fragment_Mono } from "next/font/google";
 import "./globals.css";
+
+const albertSans = Albert_Sans({
+  variable: "--font-albert",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const fragmentMono = Fragment_Mono({
+  variable: "--font-fragment",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Imdad — Portfolio",
@@ -14,9 +28,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased"
+      className={`${albertSans.variable} ${fragmentMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full h-full bg-[#050a18] text-white overflow-x-hidden selection:bg-[#e62429] selection:text-white">
+      <body className="min-h-full h-full bg-[#e8eef3] text-[#11161d] overflow-x-hidden selection:bg-white selection:text-black">
         {children}
       </body>
     </html>

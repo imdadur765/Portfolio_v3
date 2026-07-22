@@ -1,70 +1,16 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'SpiderFont';
-  src: url('/font/Mightyspidey-pmaa.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CombackHome';
-  src: url('/font/CombackHomeRegular-jEMd9.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --font-albert: 'Albert Sans', sans-serif;
   --font-fragment: 'Fragment Mono', monospace;
-  --font-spidey: 'SpiderFont', 'Albert Sans', sans-serif;
-  --font-comback: 'CombackHome', 'Fragment Mono', monospace;
   --reveal-x: -999px;
   --reveal-y: -999px;
   --reveal-radius: 0px;
-
-  /* Classic Spider-Man Blue & Red Theme */
-  --sp-red: #e62429;
-  --sp-blue: #0476d0;
-  --sp-dark-blue: #0b132b;
-  --sp-midnight: #050a18;
-  --sp-text: #ffffff;
 }
 
 @theme {
   --font-sans: var(--font-albert);
   --font-mono: var(--font-fragment);
-  --font-[#spider]: var(--font-spidey);
-  --font-[#comback]: var(--font-comback);
-}
-
-.font-spider {
-  font-family: var(--font-spidey);
-}
-
-.font-comback {
-  font-family: var(--font-comback);
-}
-
-/* Text outline utilities for high contrast over light images */
-.text-outline-dark {
-  text-shadow: 
-    -1px -1px 0 rgba(5, 10, 24, 0.8),
-     1px -1px 0 rgba(5, 10, 24, 0.8),
-    -1px  1px 0 rgba(5, 10, 24, 0.8),
-     1px  1px 0 rgba(5, 10, 24, 0.8),
-     0px  2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.text-outline-white {
-  text-shadow: 
-    -1px -1px 0 rgba(255, 255, 255, 0.9),
-     1px -1px 0 rgba(255, 255, 255, 0.9),
-    -1px  1px 0 rgba(255, 255, 255, 0.9),
-     1px  1px 0 rgba(255, 255, 255, 0.9),
-     0px  2px 10px rgba(255, 255, 255, 0.8);
 }
 
 html, body {
@@ -72,48 +18,63 @@ html, body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  background: var(--sp-midnight);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE / Edge */
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome / Safari */
 }
 
-/* Marquee animation */
+/* Marquee strip */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-  animation: marquee 26s linear infinite;
+  animation: marquee 28s linear infinite;
 }
 
-/* Web pattern overlay */
-.sp-web-grid {
-  background-image: 
-    linear-gradient(to right, rgba(4, 118, 208, 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(230, 36, 41, 0.12) 1px, transparent 1px);
-  background-size: 50px 50px;
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none !important;
+  }
 }
 
-/* Keyframes */
+/* Keyframe entrance animations */
 @keyframes hero-base-entrance {
-  0% { opacity: 0; transform: scale(1.035); }
-  100% { opacity: 1; transform: scale(1); }
+  0% {
+    opacity: 0;
+    transform: scale(1.035);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes fade-down {
-  0% { opacity: 0; transform: translateY(-16px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-up {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-hero-base {
@@ -157,8 +118,7 @@ body::-webkit-scrollbar {
   .animate-heading-2,
   .animate-heading-3,
   .animate-intro,
-  .animate-manifesto,
-  .animate-marquee {
+  .animate-manifesto {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
