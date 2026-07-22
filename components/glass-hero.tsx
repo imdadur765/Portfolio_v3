@@ -148,7 +148,7 @@ export default function GlassHero() {
       {/* LAYER 1: Base Portrait */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-no-repeat animate-hero-base z-0 bg-[position:75%_center] md:bg-center bg-cover"
+        className="absolute inset-0 bg-no-repeat bg-[length:145%] bg-[position:72%_100%] sm:bg-[length:130%] sm:bg-[position:75%_100%] md:bg-cover md:bg-center animate-hero-base z-0"
         style={{
           backgroundImage: "url('/images/base_image_desktop.png')",
         }}
@@ -157,12 +157,21 @@ export default function GlassHero() {
       {/* LAYER 2: Reveal Portrait (with Feathered Radial Mask) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-no-repeat reveal-mask-layer z-10 pointer-events-none bg-[position:75%_center] md:bg-center bg-cover"
+        className="absolute inset-0 bg-no-repeat bg-[length:145%] bg-[position:72%_100%] sm:bg-[length:130%] sm:bg-[position:75%_100%] md:bg-cover md:bg-center reveal-mask-layer z-10 pointer-events-none"
         style={{
           backgroundImage: "url('/images/reveal_image_desktop.png')",
         }}
       />
 
+
+      {/* TOP FADE MASK: soft gradient from bg color to transparent */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 z-15 pointer-events-none h-48"
+        style={{
+          background: "linear-gradient(to bottom, #e8eef3 0%, rgba(232, 238, 243, 0.7) 40%, transparent 100%)",
+        }}
+      />
 
       {/* LAYER 3: Technical Grid and Large Circle */}
       <div
@@ -266,7 +275,7 @@ export default function GlassHero() {
         <div
           className="absolute"
           style={{
-            top: "clamp(18%, 22vh, 34%)",
+            top: "clamp(24%, 25vh, 34%)",
             left: "max(5.6vw, 1.5rem)",
           }}
         >
@@ -279,7 +288,7 @@ export default function GlassHero() {
 
         {/* Bottom Left Copy & CTA */}
         <div
-          className="absolute max-w-[280px] sm:max-w-sm md:max-w-md animate-intro pointer-events-auto"
+          className="absolute max-w-[320px] sm:max-w-sm md:max-w-md animate-intro pointer-events-auto"
           style={{
             bottom: "max(2rem, env(safe-area-inset-bottom))",
             left: "max(5.6vw, 1.5rem)",
