@@ -149,14 +149,14 @@ export default function GlassHero() {
       {/* LAYER 1: Base Portrait */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full bg-[position:74%_bottom] sm:bg-[position:72%_bottom] md:bg-center bg-[size:auto_76vh] sm:bg-[size:auto_80vh] md:bg-cover bg-no-repeat bg-[url('/images/base_image_desktop.png')] animate-hero-base"
+        className="absolute inset-0 w-full h-full bg-[position:74%_bottom] sm:bg-[position:72%_bottom] md:bg-center bg-[size:auto_76vh] sm:bg-[size:auto_80vh] md:bg-cover bg-no-repeat bg-[url('/images/base_image_desktop.webp')] animate-hero-base"
       />
 
       {/* LAYER 2: Reveal Portrait with Organic Soft Mask (No Circle Border) */}
       <div
         ref={revealRef}
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full bg-[position:74%_bottom] sm:bg-[position:72%_bottom] md:bg-center bg-[size:auto_76vh] sm:bg-[size:auto_80vh] md:bg-cover bg-no-repeat bg-[url('/images/reveal_image_desktop.png')] reveal-mask pointer-events-none"
+        className="absolute inset-0 w-full h-full bg-[position:74%_bottom] sm:bg-[position:72%_bottom] md:bg-center bg-[size:auto_76vh] sm:bg-[size:auto_80vh] md:bg-cover bg-no-repeat bg-[url('/images/reveal_image_desktop.webp')] reveal-mask pointer-events-none"
         style={{
           '--reveal-x': '-999px',
           '--reveal-y': '-999px',

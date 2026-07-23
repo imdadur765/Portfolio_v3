@@ -17,6 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full w-full bg-[#0d1520]">
+      <head>
+        <link rel="preload" href="/images/base_image_desktop.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/images/reveal_image_desktop.webp" as="image" type="image/webp" />
+      </head>
       <body className="h-full w-full bg-[#0d1520] text-[#0d1520] antialiased overflow-hidden select-none">
         {children}
       </body>
