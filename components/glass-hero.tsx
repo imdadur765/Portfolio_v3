@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 const DESKTOP_RADIUS = 180;
 const MOBILE_RADIUS = 120;
@@ -236,14 +237,12 @@ export default function GlassHero() {
           <p className="text-[0.88rem] sm:text-[1.02rem] md:text-[1.12rem] font-normal leading-[1.38] text-white md:text-[#0d1520]/90 mb-4 sm:mb-5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] md:drop-shadow-none">
             I build useful products, experiment with emerging technology, and turn the process into stories worth sharing.
           </p>
-          <a
-            href={TOPMATE_URL}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href="/work"
             className="pointer-events-auto inline-flex items-center justify-center min-h-[44px] min-w-[44px] px-6 py-3 rounded-full bg-[#dce7f0] text-[#0d1520] font-medium text-sm border border-white/60 shadow-[-5px_-5px_12px_#ffffff,5px_5px_12px_rgba(13,21,32,0.14)] hover:shadow-[-2px_-2px_6px_#ffffff,2px_2px_6px_rgba(13,21,32,0.18)] hover:scale-[1.02] active:scale-[0.98] active:shadow-[inset_2px_2px_5px_rgba(13,21,32,0.15),inset_-2px_-2px_5px_#ffffff] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Explore my work
-          </a>
+          </Link>
         </div>
       </section>
 
