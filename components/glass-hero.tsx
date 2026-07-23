@@ -146,23 +146,26 @@ export default function GlassHero() {
       {/* Dark bottom backdrop — lighter on mobile, full on desktop */}
       <div className="absolute inset-x-0 bottom-0 h-24 pointer-events-none z-[1] bottom-gradient" />
 
-      {/* LAYER 1: Base Portrait */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full bg-[position:74%_bottom] sm:bg-[position:72%_bottom] md:bg-center bg-[size:auto_76vh] sm:bg-[size:auto_80vh] md:bg-cover bg-no-repeat bg-[url('/images/base_image_desktop.webp')] animate-hero-base"
-      />
+      {/* SHARED PORTRAIT CONTAINER FOR PERFECT PIXEL ALIGNMENT ON MOBILE */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none animate-hero-base">
+        {/* LAYER 1: Base Portrait */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full bg-[position:74%_bottom] sm:bg-[position:72%_bottom] md:bg-center bg-[size:auto_76vh] sm:bg-[size:auto_80vh] md:bg-cover bg-no-repeat bg-[url('/images/base_image_desktop.webp')]"
+        />
 
-      {/* LAYER 2: Reveal Portrait with Organic Soft Mask (No Circle Border) */}
-      <div
-        ref={revealRef}
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full bg-[position:74%_bottom] sm:bg-[position:72%_bottom] md:bg-center bg-[size:auto_76vh] sm:bg-[size:auto_80vh] md:bg-cover bg-no-repeat bg-[url('/images/reveal_image_desktop.webp')] reveal-mask pointer-events-none"
-        style={{
-          '--reveal-x': '-999px',
-          '--reveal-y': '-999px',
-          '--reveal-radius': '0px',
-        } as React.CSSProperties}
-      />
+        {/* LAYER 2: Reveal Portrait with Organic Soft Mask */}
+        <div
+          ref={revealRef}
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full bg-[position:74%_bottom] sm:bg-[position:72%_bottom] md:bg-center bg-[size:auto_76vh] sm:bg-[size:auto_80vh] md:bg-cover bg-no-repeat bg-[url('/images/reveal_image_desktop.webp')] reveal-mask"
+          style={{
+            '--reveal-x': '-999px',
+            '--reveal-y': '-999px',
+            '--reveal-radius': '0px',
+          } as React.CSSProperties}
+        />
+      </div>
 
       {/* LAYER 3: Technical Grid & Large Geometric Circle */}
       <div aria-hidden="true" className="absolute inset-0 w-full h-full pointer-events-none z-10">
