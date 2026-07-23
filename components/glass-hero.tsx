@@ -254,33 +254,16 @@ export default function GlassHero() {
         }}
       >
         <nav className="flex items-center justify-between w-full max-w-[1720px] mx-auto">
-          {/* Brand Mark & Name */}
+          {/* Brand Logo Image */}
           <a
             href="#"
-            className="flex items-center gap-2.5 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded-lg min-h-[44px] px-1"
+            className="flex items-center gap-2 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded-lg min-h-[44px]"
           >
-            {/* Original Angular Inline-SVG "I" Mark */}
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 text-[#0d1520] transition-transform duration-300 group-hover:scale-110"
-              aria-hidden="true"
-            >
-              <path
-                d="M4 2H16L20 6V22H8L4 18V2Z"
-                fill="currentColor"
-              />
-              <path
-                d="M9 6.5H14.5V17.5H9V6.5Z"
-                fill="#dce7f0"
-              />
-            </svg>
-            <span className="font-semibold text-lg sm:text-xl tracking-tight text-[#0d1520]">
-              Imdad
-            </span>
+            <img
+              src="/images/imdad_logo.png"
+              alt="Imdad"
+              className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Navigation Links */}
