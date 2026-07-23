@@ -1,5 +1,9 @@
-import GlassHero from "@/components/glass-hero";
+import GlassHero from '@/components/glass-hero';
 
 export default function Home() {
-  return <GlassHero />;
+  return (
+    <main className="relative w-full h-screen overflow-hidden">
+      <GlassHero />
+    </main>
+  );
 }

@@ -1,23 +1,13 @@
-import type { Metadata } from "next";
-import { Albert_Sans, Fragment_Mono } from "next/font/google";
-import "./globals.css";
-
-const albertSans = Albert_Sans({
-  variable: "--font-albert",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const fragmentMono = Fragment_Mono({
-  variable: "--font-fragment",
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
+import type { Metadata, Viewport } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Imdad — Portfolio",
-  description: "Building Beyond Possible. Personal portfolio of Imdad.",
+  title: 'Imdad — Building Beyond Possible',
+  description: 'Personal portfolio of Imdad — useful products, emerging tech, and public builds.',
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0d1520',
 };
 
 export default function RootLayout({
@@ -26,11 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${albertSans.variable} ${fragmentMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full h-full bg-[#e8eef3] text-[#11161d] overflow-x-hidden selection:bg-white selection:text-black">
+    <html lang="en" className="h-full w-full bg-[#0d1520]">
+      <body className="h-full w-full bg-[#0d1520] text-[#0d1520] antialiased overflow-hidden select-none">
         {children}
       </body>
     </html>
