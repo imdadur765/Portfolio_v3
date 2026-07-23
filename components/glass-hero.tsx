@@ -262,7 +262,7 @@ export default function GlassHero() {
             <img
               src="/images/imdad_logo.png"
               alt="Imdad"
-              className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-9 sm:h-10 md:h-11 w-auto object-contain brightness-0 transition-transform duration-300 group-hover:scale-105"
             />
           </a>
 
