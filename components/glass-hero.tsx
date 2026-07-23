@@ -237,7 +237,7 @@ export default function GlassHero() {
             href={TOPMATE_URL}
             target="_blank"
             rel="noreferrer"
-            className="pointer-events-auto inline-flex items-center justify-center min-h-[44px] min-w-[44px] px-6 py-3 rounded-full bg-white text-[#0d1520] font-medium text-sm border border-white/80 shadow-[0_8px_24px_rgba(0,0,0,0.22)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.32)] hover:scale-[1.02] active:scale-[0.98] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200"
+            className="pointer-events-auto inline-flex items-center justify-center min-h-[44px] min-w-[44px] px-6 py-3 rounded-full bg-[#dce7f0] text-[#0d1520] font-medium text-sm border border-white/60 shadow-[-5px_-5px_12px_#ffffff,5px_5px_12px_rgba(13,21,32,0.14)] hover:shadow-[-2px_-2px_6px_#ffffff,2px_2px_6px_rgba(13,21,32,0.18)] hover:scale-[1.02] active:scale-[0.98] active:shadow-[inset_2px_2px_5px_rgba(13,21,32,0.15),inset_-2px_-2px_5px_#ffffff] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Explore my work
           </a>
