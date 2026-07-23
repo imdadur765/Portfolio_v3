@@ -143,8 +143,8 @@ export default function GlassHero() {
       onTouchCancel={handleTouchEnd}
       className="relative w-full h-screen overflow-hidden select-none touch-none bg-[#dce7f0]"
     >
-      {/* Dark bottom backdrop layer to cover ONLY the very bottom gesture bar strip */}
-      <div className="absolute bottom-0 left-0 w-full h-[60px] bg-[#0d1520] pointer-events-none z-[1]" aria-hidden="true" />
+      {/* Dark bottom backdrop — lighter on mobile, full on desktop */}
+      <div className="absolute inset-x-0 bottom-0 h-24 pointer-events-none z-[1] bottom-gradient" />
 
       {/* LAYER 1: Base Portrait */}
       <div
